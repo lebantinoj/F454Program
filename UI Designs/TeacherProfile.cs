@@ -34,12 +34,7 @@ namespace UI_Designs
             this.studentTableAdapter1.Fill(this.f454ProjectDatabaseDataSet1.Student);
 
 
-            // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet.Student' table. You can move, or remove it, as needed.
-            //this.studentTableAdapter.Fill(this.f454ProjectDatabaseDataSet.Student);
-
-            //List<string> userName = new List<string>();
-
-            //MessageBox.Show(userName[0]);
+            
 
             OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\\F454\\F454 Program\\UI Designs\\F454ProjectDatabase.accdb");
             
