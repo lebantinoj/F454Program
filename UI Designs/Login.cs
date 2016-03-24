@@ -59,12 +59,12 @@ namespace UI_Designs
         private void subLogin_Click(object sender, EventArgs e)
         {
             // The following code opens up a connection between the program and the database.
-            OleDbConnection cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\\F454\\F454 Program\\UI Designs\\F454ProjectDatabase.accdb");
+            OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = S:\\F454 Program 2\\UI Designs\\F454ProjectDatabase.accdb");
             // This allows us to send commands to the database.
             OleDbCommand command = new OleDbCommand();
 
             // We need to open the connection.
-            cn.Open();
+            con.Open();
             
             // Data sets to store the student and teacher tables.
             DataSet dataSetStu = new DataSet();
@@ -74,8 +74,8 @@ namespace UI_Designs
             string qryS = "SELECT * from Student", qryT = "Select * from Teacher";
 
             // Adapter holds data from query and connection.
-            OleDbDataAdapter adapterStudent = new OleDbDataAdapter(qryS, cn);
-            OleDbDataAdapter adapterTeacher = new OleDbDataAdapter(qryT, cn);
+            OleDbDataAdapter adapterStudent = new OleDbDataAdapter(qryS, con);
+            OleDbDataAdapter adapterTeacher = new OleDbDataAdapter(qryT, con);
 
             // Fills data sets with data from 
             adapterStudent.Fill(dataSetStu);
@@ -155,7 +155,7 @@ namespace UI_Designs
             {
                 MessageBox.Show("Please choose a user type.");
             }
-            cn.Close();
+            con.Close();
             }
 
         }

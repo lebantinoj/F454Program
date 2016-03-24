@@ -14,6 +14,9 @@ namespace UI_Designs
     public partial class TeacherProfile : Form
     {
         public OleDbConnection cn = new OleDbConnection();
+
+        public Edit v { get; private set; }
+
         public TeacherProfile(string name)
         {
             InitializeComponent();
@@ -26,6 +29,10 @@ namespace UI_Designs
 
         private void TeacherProfile_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet5.Student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter5.Fill(this.f454ProjectDatabaseDataSet5.Student);
+            // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet4.Student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter4.Fill(this.f454ProjectDatabaseDataSet4.Student);
             // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet3.Student' table. You can move, or remove it, as needed.
             this.studentTableAdapter3.Fill(this.f454ProjectDatabaseDataSet3.Student);
             // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet2.Student' table. You can move, or remove it, as needed.
@@ -138,6 +145,22 @@ namespace UI_Designs
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();    // Hides the current form (Teacher Profile).
+            var Edit = new Edit(v);     // A new edit form generated.
+            Edit.Show();        // Shows the edit page.
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            /*
+            string negStatus = "Below Target", posStatus = "Above Target", reachedStatus = "On Target";
+
+            if ()
+            */
+        }
+
+        private void prdctGrade_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -83,6 +83,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>F454ProjectDatabaseDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="F454ProjectDatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>F454ProjectDatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="F454ProjectDatabaseDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>F454ProjectDatabaseDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +200,28 @@
     </None>
     <None Include="F454ProjectDatabaseDataSet3.xss">
       <DependentUpon>F454ProjectDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="F454ProjectDatabaseDataSet4.xsc">
+      <DependentUpon>F454ProjectDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="F454ProjectDatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F454ProjectDatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F454ProjectDatabaseDataSet4.xss">
+      <DependentUpon>F454ProjectDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="F454ProjectDatabaseDataSet5.xsc">
+      <DependentUpon>F454ProjectDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="F454ProjectDatabaseDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F454ProjectDatabaseDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F454ProjectDatabaseDataSet5.xss">
+      <DependentUpon>F454ProjectDatabaseDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
