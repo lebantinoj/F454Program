@@ -61,6 +61,9 @@
             this.classCombo = new System.Windows.Forms.ComboBox();
             this.chooseUsr = new System.Windows.Forms.ComboBox();
             this.chooseStu = new System.Windows.Forms.ComboBox();
+            this.trgtGradeE = new System.Windows.Forms.TextBox();
+            this.newUser = new System.Windows.Forms.Button();
+            this.bckTp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet4)).BeginInit();
@@ -73,7 +76,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(58, 66);
+            this.label1.Location = new System.Drawing.Point(434, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 31);
             this.label1.TabIndex = 4;
@@ -109,6 +112,7 @@
             // 
             // t1MarkE
             // 
+            this.t1MarkE.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 1 Mark", true));
             this.t1MarkE.Location = new System.Drawing.Point(153, 342);
             this.t1MarkE.Name = "t1MarkE";
             this.t1MarkE.Size = new System.Drawing.Size(58, 20);
@@ -116,6 +120,7 @@
             // 
             // t1GradeE
             // 
+            this.t1GradeE.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 1 Grade", true));
             this.t1GradeE.Location = new System.Drawing.Point(153, 300);
             this.t1GradeE.Name = "t1GradeE";
             this.t1GradeE.ReadOnly = true;
@@ -157,6 +162,7 @@
             // 
             // t2MarkE
             // 
+            this.t2MarkE.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 2 Mark", true));
             this.t2MarkE.Location = new System.Drawing.Point(149, 538);
             this.t2MarkE.Name = "t2MarkE";
             this.t2MarkE.Size = new System.Drawing.Size(58, 20);
@@ -164,6 +170,7 @@
             // 
             // t2GradeE
             // 
+            this.t2GradeE.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 2 Grade", true));
             this.t2GradeE.Location = new System.Drawing.Point(149, 497);
             this.t2GradeE.Name = "t2GradeE";
             this.t2GradeE.Size = new System.Drawing.Size(58, 20);
@@ -204,6 +211,7 @@
             // 
             // t3MarkE
             // 
+            this.t3MarkE.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 3 Mark", true));
             this.t3MarkE.Location = new System.Drawing.Point(150, 740);
             this.t3MarkE.Name = "t3MarkE";
             this.t3MarkE.Size = new System.Drawing.Size(58, 20);
@@ -211,6 +219,7 @@
             // 
             // t3GradeE
             // 
+            this.t3GradeE.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 3 Grade", true));
             this.t3GradeE.Location = new System.Drawing.Point(150, 698);
             this.t3GradeE.Name = "t3GradeE";
             this.t3GradeE.Size = new System.Drawing.Size(58, 20);
@@ -262,6 +271,7 @@
             // 
             // avgMarkE
             // 
+            this.avgMarkE.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Average Mark", true));
             this.avgMarkE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.avgMarkE.Location = new System.Drawing.Point(846, 254);
             this.avgMarkE.Name = "avgMarkE";
@@ -270,6 +280,7 @@
             // 
             // prdctGradeE
             // 
+            this.prdctGradeE.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Predicted Grade", true));
             this.prdctGradeE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prdctGradeE.Location = new System.Drawing.Point(846, 294);
             this.prdctGradeE.Name = "prdctGradeE";
@@ -345,12 +356,44 @@
             this.chooseStu.Size = new System.Drawing.Size(166, 21);
             this.chooseStu.TabIndex = 68;
             // 
+            // trgtGradeE
+            // 
+            this.trgtGradeE.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Target Grade", true));
+            this.trgtGradeE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trgtGradeE.Location = new System.Drawing.Point(846, 336);
+            this.trgtGradeE.Name = "trgtGradeE";
+            this.trgtGradeE.Size = new System.Drawing.Size(92, 26);
+            this.trgtGradeE.TabIndex = 71;
+            // 
+            // newUser
+            // 
+            this.newUser.Location = new System.Drawing.Point(795, 118);
+            this.newUser.Name = "newUser";
+            this.newUser.Size = new System.Drawing.Size(143, 37);
+            this.newUser.TabIndex = 72;
+            this.newUser.Text = "Add New User";
+            this.newUser.UseVisualStyleBackColor = true;
+            this.newUser.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // bckTp
+            // 
+            this.bckTp.Location = new System.Drawing.Point(79, 21);
+            this.bckTp.Name = "bckTp";
+            this.bckTp.Size = new System.Drawing.Size(143, 37);
+            this.bckTp.TabIndex = 73;
+            this.bckTp.Text = "< Back";
+            this.bckTp.UseVisualStyleBackColor = true;
+            this.bckTp.Click += new System.EventHandler(this.bckTp_Click);
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1064, 750);
+            this.Controls.Add(this.bckTp);
+            this.Controls.Add(this.newUser);
+            this.Controls.Add(this.trgtGradeE);
             this.Controls.Add(this.classCombo);
             this.Controls.Add(this.chooseUsr);
             this.Controls.Add(this.chooseStu);
@@ -429,5 +472,8 @@
         private System.Windows.Forms.ComboBox classCombo;
         private System.Windows.Forms.ComboBox chooseUsr;
         private System.Windows.Forms.ComboBox chooseStu;
+        private System.Windows.Forms.TextBox trgtGradeE;
+        private System.Windows.Forms.Button newUser;
+        private System.Windows.Forms.Button bckTp;
     }
 }

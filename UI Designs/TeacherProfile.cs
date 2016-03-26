@@ -31,35 +31,6 @@ namespace UI_Designs
         {
             // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet5.Student' table. You can move, or remove it, as needed.
             this.studentTableAdapter5.Fill(this.f454ProjectDatabaseDataSet5.Student);
-            // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet4.Student' table. You can move, or remove it, as needed.
-            this.studentTableAdapter4.Fill(this.f454ProjectDatabaseDataSet4.Student);
-            // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet3.Student' table. You can move, or remove it, as needed.
-            this.studentTableAdapter3.Fill(this.f454ProjectDatabaseDataSet3.Student);
-            // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet2.Student' table. You can move, or remove it, as needed.
-            this.studentTableAdapter2.Fill(this.f454ProjectDatabaseDataSet2.Student);
-            // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet1.Student' table. You can move, or remove it, as needed.
-            this.studentTableAdapter1.Fill(this.f454ProjectDatabaseDataSet1.Student);
-
-
-            
-
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\\F454\\F454 Program\\UI Designs\\F454ProjectDatabase.accdb");
-            
-            con.Open();
-            string qry = "SELECT [StuID], [First Name], [Last Name], [Class] FROM Student";
-            OleDbCommand command = new OleDbCommand(qry, con);
-
-            OleDbDataAdapter adapt = new OleDbDataAdapter();
-            DataSet cbS = new DataSet();
-            adapt.Fill(cbS);
-            chooseStu.DataSource = cbS.Tables[0];
-            chooseStu.DisplayMember = "StuID";
-            chooseStu.ValueMember = "Last Name";
-
-            cn.Close();
-            
-            
-            
             
         }
 
@@ -127,21 +98,7 @@ namespace UI_Designs
 
         private void chooseStu_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            /*
-            OleDbConnection cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\\F454\\F454 Program\\UI Designs\\F454ProjectDatabase.accdb");
-            cn.Open();
-
-            string select = "Select Term 1 Grade, Term 1 Mar, Term 2 Grade, Term 2 Mark, Term 3 Grade, Term 3 Mark from Student";
-            OleDbDataAdapter adapter = new OleDbDataAdapter();
-            OleDbCommand cm = new OleDbCommand(select, cn);
-            OleDbDataReader dr = cm.ExecuteReader();
-
-            if(dr.Read())
-            {
-                autGrade.Text=
-            }
-            cn.Close();
-            */
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -153,18 +110,17 @@ namespace UI_Designs
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            /*
-            string negStatus = "Below Target", posStatus = "Above Target", reachedStatus = "On Target";
-
-            if ()
-            */
+            
         }
 
         private void prdctGrade_TextChanged(object sender, EventArgs e)
         {
 
         }
-    }
+
+        
+    } 
+    
     }
                 
 

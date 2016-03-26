@@ -49,17 +49,28 @@ namespace UI_Designs
 
         private void Edit_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet4.Student' table. You can move, or remove it, as needed.
-            this.studentTableAdapter1.Fill(this.f454ProjectDatabaseDataSet4.Student);
+           
             // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet5.Student' table. You can move, or remove it, as needed.
             this.studentTableAdapter.Fill(this.f454ProjectDatabaseDataSet5.Student);
 
-            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\\F454 Program 2\\UI Designs\\F454ProjectDatabase.accdb");
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bckTp_Click(object sender, EventArgs e)
+        {
+            this.Hide();    // Hides the current form (Teacher Profile).
+            var Tp = new TeacherProfile(v);     // Returns the user back to the Teacher Profile.
+            Tp.Show();      //Teacher Profile is shown.
         }
     }
 }

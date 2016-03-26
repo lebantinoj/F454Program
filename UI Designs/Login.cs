@@ -59,7 +59,7 @@ namespace UI_Designs
         private void subLogin_Click(object sender, EventArgs e)
         {
             // The following code opens up a connection between the program and the database.
-            OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = S:\\F454 Program 2\\UI Designs\\F454ProjectDatabase.accdb");
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=H:\\F454 Program 2\\UI Designs\\F454ProjectDatabase.accdb");
             // This allows us to send commands to the database.
             OleDbCommand command = new OleDbCommand();
 
