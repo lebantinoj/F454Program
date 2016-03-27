@@ -34,6 +34,8 @@
             this.Mark = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.t1MarkE = new System.Windows.Forms.TextBox();
+            this.studentBindingSource10 = new System.Windows.Forms.BindingSource(this.components);
+            this.f454ProjectDatabaseDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t1GradeE = new System.Windows.Forms.TextBox();
             this.assess1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,19 +58,18 @@
             this.studentTableAdapter = new F454_Program.F454ProjectDatabaseDataSet5TableAdapters.StudentTableAdapter();
             this.f454ProjectDatabaseDataSet4 = new F454_Program.F454ProjectDatabaseDataSet4();
             this.studentTableAdapter1 = new F454_Program.F454ProjectDatabaseDataSet4TableAdapters.StudentTableAdapter();
-            this.f454ProjectDatabaseDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentBindingSource10 = new System.Windows.Forms.BindingSource(this.components);
             this.classCombo = new System.Windows.Forms.ComboBox();
             this.chooseUsr = new System.Windows.Forms.ComboBox();
             this.chooseStu = new System.Windows.Forms.ComboBox();
             this.trgtGradeE = new System.Windows.Forms.TextBox();
             this.newUser = new System.Windows.Forms.Button();
             this.bckTp = new System.Windows.Forms.Button();
+            this.sveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource10)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -118,8 +119,19 @@
             this.t1MarkE.Size = new System.Drawing.Size(58, 20);
             this.t1MarkE.TabIndex = 50;
             // 
+            // studentBindingSource10
+            // 
+            this.studentBindingSource10.DataMember = "Student";
+            this.studentBindingSource10.DataSource = this.f454ProjectDatabaseDataSet5BindingSource;
+            // 
+            // f454ProjectDatabaseDataSet5BindingSource
+            // 
+            this.f454ProjectDatabaseDataSet5BindingSource.DataSource = this.f454ProjectDatabaseDataSet5;
+            this.f454ProjectDatabaseDataSet5BindingSource.Position = 0;
+            // 
             // t1GradeE
             // 
+            this.t1GradeE.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.t1GradeE.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 1 Grade", true));
             this.t1GradeE.Location = new System.Drawing.Point(153, 300);
             this.t1GradeE.Name = "t1GradeE";
@@ -316,16 +328,6 @@
             // 
             this.studentTableAdapter1.ClearBeforeFill = true;
             // 
-            // f454ProjectDatabaseDataSet5BindingSource
-            // 
-            this.f454ProjectDatabaseDataSet5BindingSource.DataSource = this.f454ProjectDatabaseDataSet5;
-            this.f454ProjectDatabaseDataSet5BindingSource.Position = 0;
-            // 
-            // studentBindingSource10
-            // 
-            this.studentBindingSource10.DataMember = "Student";
-            this.studentBindingSource10.DataSource = this.f454ProjectDatabaseDataSet5BindingSource;
-            // 
             // classCombo
             // 
             this.classCombo.DataSource = this.studentBindingSource10;
@@ -385,12 +387,23 @@
             this.bckTp.UseVisualStyleBackColor = true;
             this.bckTp.Click += new System.EventHandler(this.bckTp_Click);
             // 
+            // sveButton
+            // 
+            this.sveButton.Location = new System.Drawing.Point(357, 824);
+            this.sveButton.Name = "sveButton";
+            this.sveButton.Size = new System.Drawing.Size(143, 37);
+            this.sveButton.TabIndex = 74;
+            this.sveButton.Text = "Save";
+            this.sveButton.UseVisualStyleBackColor = true;
+            this.sveButton.Click += new System.EventHandler(this.sveButton_Click);
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(1064, 750);
+            this.ClientSize = new System.Drawing.Size(1064, 873);
+            this.Controls.Add(this.sveButton);
             this.Controls.Add(this.bckTp);
             this.Controls.Add(this.newUser);
             this.Controls.Add(this.trgtGradeE);
@@ -423,10 +436,10 @@
             this.Text = "Edit";
             this.Load += new System.EventHandler(this.Edit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,5 +488,6 @@
         private System.Windows.Forms.TextBox trgtGradeE;
         private System.Windows.Forms.Button newUser;
         private System.Windows.Forms.Button bckTp;
+        private System.Windows.Forms.Button sveButton;
     }
 }
