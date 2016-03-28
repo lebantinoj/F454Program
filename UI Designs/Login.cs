@@ -115,7 +115,7 @@ namespace UI_Designs
                         usrFound = true;        // If the user has been found a message will be displayed - shows successful login.
                         MessageBox.Show("Welcome, " + drS["First Name"].ToString() + ".");      // Welcome message.
                         this.Hide();        // Hides login form.
-                        var StudentProfile = new StudentProfile("Welcome");     // Will open up the student profile.
+                        var StudentProfile = new stuUser("Welcome");     // Will open up the student profile.
                         StudentProfile.Show();      // Displays student profile.
                     }
                     

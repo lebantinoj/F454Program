@@ -57,6 +57,7 @@
             this.passTxtbox.Location = new System.Drawing.Point(630, 123);
             this.passTxtbox.MaxLength = 16;
             this.passTxtbox.Name = "passTxtbox";
+            this.passTxtbox.PasswordChar = '*';
             this.passTxtbox.Size = new System.Drawing.Size(197, 38);
             this.passTxtbox.TabIndex = 1;
             // 

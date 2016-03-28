@@ -11,9 +11,9 @@ using System.Data.OleDb;
 
 namespace UI_Designs
 {
-    public partial class StudentProfile : Form
+    public partial class stuUser : Form
     {
-        public StudentProfile(string name)
+        public stuUser(string name)
         {
             InitializeComponent();
         }
@@ -31,7 +31,13 @@ namespace UI_Designs
         private void predictGrade_Load(object sender, EventArgs e)
         {
             
-            }
         }
-        
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
     }
+        
+}

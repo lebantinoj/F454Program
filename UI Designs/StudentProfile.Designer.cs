@@ -1,6 +1,6 @@
 ﻿namespace UI_Designs
 {
-    partial class StudentProfile
+    partial class stuUser
     {
         /// <summary>
         /// Required designer variable.
@@ -61,6 +61,7 @@
             this.schlLogo = new System.Windows.Forms.Label();
             this.trgtGrade = new System.Windows.Forms.TextBox();
             this.tgradeLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.personalGraph)).BeginInit();
             this.SuspendLayout();
             // 
@@ -351,12 +352,24 @@
             this.tgradeLabel.TabIndex = 40;
             this.tgradeLabel.Text = "Target Grade";
             // 
-            // StudentProfile
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label2.Location = new System.Drawing.Point(305, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 31);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "stuUser";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // stuUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(1064, 873);
+            this.ClientSize = new System.Drawing.Size(1064, 567);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.trgtGrade);
             this.Controls.Add(this.tgradeLabel);
             this.Controls.Add(this.schlLogo);
@@ -387,7 +400,7 @@
             this.Controls.Add(this.t1Grade);
             this.Controls.Add(this.assess1);
             this.Controls.Add(this.wlcmLabel);
-            this.Name = "StudentProfile";
+            this.Name = "stuUser";
             this.Text = "Student Profile";
             this.Load += new System.EventHandler(this.predictGrade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.personalGraph)).EndInit();
@@ -428,5 +441,6 @@
         private System.Windows.Forms.Label schlLogo;
         private System.Windows.Forms.TextBox trgtGrade;
         private System.Windows.Forms.Label tgradeLabel;
+        private System.Windows.Forms.Label label2;
     }
 }
