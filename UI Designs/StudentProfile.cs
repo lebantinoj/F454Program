@@ -44,6 +44,13 @@ namespace UI_Designs
 
         }
 
+        private void logOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();    // Hides Student Profile.
+            Login login = new Login();  // New login form.
+            login.Show();
+        }
+
        
     }
         

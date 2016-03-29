@@ -53,7 +53,6 @@
             this.averageMarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.predictedGradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.targetGradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.retrieveBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.enterFullname = new System.Windows.Forms.TextBox();
@@ -254,15 +253,6 @@
             this.targetGradeDataGridViewTextBoxColumn.HeaderText = "Target Grade";
             this.targetGradeDataGridViewTextBoxColumn.Name = "targetGradeDataGridViewTextBoxColumn";
             // 
-            // retrieveBtn
-            // 
-            this.retrieveBtn.Location = new System.Drawing.Point(753, 239);
-            this.retrieveBtn.Name = "retrieveBtn";
-            this.retrieveBtn.Size = new System.Drawing.Size(128, 43);
-            this.retrieveBtn.TabIndex = 76;
-            this.retrieveBtn.Text = "Retrieve";
-            this.retrieveBtn.UseVisualStyleBackColor = true;
-            // 
             // updateBtn
             // 
             this.updateBtn.Location = new System.Drawing.Point(753, 172);
@@ -275,7 +265,7 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(753, 302);
+            this.deleteBtn.Location = new System.Drawing.Point(753, 239);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(128, 43);
             this.deleteBtn.TabIndex = 78;
@@ -568,7 +558,6 @@
             this.Controls.Add(this.enterFullname);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.updateBtn);
-            this.Controls.Add(this.retrieveBtn);
             this.Controls.Add(this.editDg);
             this.Controls.Add(this.bckTp);
             this.Controls.Add(this.label1);
@@ -618,7 +607,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn averageMarkDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn predictedGradeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn targetGradeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button retrieveBtn;
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.TextBox enterFullname;

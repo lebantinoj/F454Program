@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.wlcmLabel = new System.Windows.Forms.Label();
             this.assess1 = new System.Windows.Forms.Label();
             this.t1Grade = new System.Windows.Forms.TextBox();
@@ -52,23 +49,20 @@
             this.t3Mark = new System.Windows.Forms.TextBox();
             this.t3Grade = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.leaderboardLbl = new System.Windows.Forms.Label();
-            this.leaderB = new System.Windows.Forms.TreeView();
             this.t1Notes = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.t3Note = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.t2Notes = new System.Windows.Forms.TextBox();
-            this.personalGraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.schlLogo = new System.Windows.Forms.Label();
             this.trgtGrade = new System.Windows.Forms.TextBox();
             this.tgradeLabel = new System.Windows.Forms.Label();
             this.stuUsername = new System.Windows.Forms.Label();
             this.studentTableAdapter = new F454_Program.F454ProjectDatabaseDataSet5TableAdapters.StudentTableAdapter();
+            this.logOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personalGraph)).BeginInit();
             this.SuspendLayout();
             // 
             // wlcmLabel
@@ -254,24 +248,6 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Term 3 - Assessment Grade";
             // 
-            // leaderboardLbl
-            // 
-            this.leaderboardLbl.AutoSize = true;
-            this.leaderboardLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.leaderboardLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.leaderboardLbl.Location = new System.Drawing.Point(777, 56);
-            this.leaderboardLbl.Name = "leaderboardLbl";
-            this.leaderboardLbl.Size = new System.Drawing.Size(143, 26);
-            this.leaderboardLbl.TabIndex = 19;
-            this.leaderboardLbl.Text = "Leader Board";
-            // 
-            // leaderB
-            // 
-            this.leaderB.Location = new System.Drawing.Point(782, 85);
-            this.leaderB.Name = "leaderB";
-            this.leaderB.Size = new System.Drawing.Size(209, 262);
-            this.leaderB.TabIndex = 20;
-            // 
             // t1Notes
             // 
             this.t1Notes.Location = new System.Drawing.Point(319, 303);
@@ -326,22 +302,6 @@
             this.t2Notes.Size = new System.Drawing.Size(292, 20);
             this.t2Notes.TabIndex = 27;
             // 
-            // personalGraph
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.personalGraph.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.personalGraph.Legends.Add(legend4);
-            this.personalGraph.Location = new System.Drawing.Point(782, 389);
-            this.personalGraph.Name = "personalGraph";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.personalGraph.Series.Add(series4);
-            this.personalGraph.Size = new System.Drawing.Size(209, 201);
-            this.personalGraph.TabIndex = 38;
-            this.personalGraph.Text = "chart1";
-            // 
             // schlLogo
             // 
             this.schlLogo.AutoSize = true;
@@ -385,25 +345,34 @@
             // 
             this.studentTableAdapter.ClearBeforeFill = true;
             // 
+            // logOut
+            // 
+            this.logOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.logOut.Location = new System.Drawing.Point(806, 39);
+            this.logOut.Name = "logOut";
+            this.logOut.Size = new System.Drawing.Size(227, 31);
+            this.logOut.TabIndex = 50;
+            this.logOut.Text = "Log Out";
+            this.logOut.UseVisualStyleBackColor = true;
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
+            // 
             // StudentProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1064, 567);
+            this.Controls.Add(this.logOut);
             this.Controls.Add(this.stuUsername);
             this.Controls.Add(this.trgtGrade);
             this.Controls.Add(this.tgradeLabel);
             this.Controls.Add(this.schlLogo);
-            this.Controls.Add(this.personalGraph);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.t2Notes);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.t3Note);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.t1Notes);
-            this.Controls.Add(this.leaderB);
-            this.Controls.Add(this.leaderboardLbl);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.t3Mark);
@@ -427,7 +396,6 @@
             this.Load += new System.EventHandler(this.StudentProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personalGraph)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,15 +421,12 @@
         private System.Windows.Forms.TextBox t3Mark;
         private System.Windows.Forms.TextBox t3Grade;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label leaderboardLbl;
-        private System.Windows.Forms.TreeView leaderB;
         private System.Windows.Forms.TextBox t1Notes;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox t3Note;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox t2Notes;
-        private System.Windows.Forms.DataVisualization.Charting.Chart personalGraph;
         private System.Windows.Forms.Label schlLogo;
         private System.Windows.Forms.TextBox trgtGrade;
         private System.Windows.Forms.Label tgradeLabel;
@@ -469,5 +434,6 @@
         private F454_Program.F454ProjectDatabaseDataSet5 f454ProjectDatabaseDataSet5;
         private System.Windows.Forms.BindingSource studentBindingSource;
         private F454_Program.F454ProjectDatabaseDataSet5TableAdapters.StudentTableAdapter studentTableAdapter;
+        private System.Windows.Forms.Button logOut;
     }
 }

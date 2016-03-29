@@ -118,6 +118,13 @@ namespace UI_Designs
 
         }
 
+        private void logOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();    //Hides Teacher Profile
+            Login login = new Login();  //opens new login form.
+            login.Show();
+        }
+
         
     } 
     

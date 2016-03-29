@@ -29,41 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.Label label6;
+            System.Windows.Forms.Label label7;
+            System.Windows.Forms.TextBox sumMark;
+            System.Windows.Forms.TextBox sumGrade;
+            System.Windows.Forms.Label label8;
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label4;
+            System.Windows.Forms.TextBox sprMark;
+            System.Windows.Forms.TextBox sprGrade;
+            System.Windows.Forms.Label label5;
+            System.Windows.Forms.TextBox prdctGrade;
+            System.Windows.Forms.Label prdctGradelbl;
+            System.Windows.Forms.Label Mark;
+            System.Windows.Forms.Label label10;
+            System.Windows.Forms.TextBox autMark;
+            System.Windows.Forms.TextBox autGrade;
+            System.Windows.Forms.Label assess1;
+            System.Windows.Forms.TextBox avgMark;
+            System.Windows.Forms.Label avgMarklbl;
+            System.Windows.Forms.TextBox trgtGrade;
+            System.Windows.Forms.Label trgtGradelbl;
             this.Welcome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.sumMark = new System.Windows.Forms.TextBox();
             this.studentBindingSource10 = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet5 = new F454_Program.F454ProjectDatabaseDataSet5();
             this.studentBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet3 = new F454_Program.F454ProjectDatabaseDataSet3();
-            this.sumGrade = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.sprMark = new System.Windows.Forms.TextBox();
-            this.sprGrade = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.prdctGrade = new System.Windows.Forms.TextBox();
-            this.prdctGradelbl = new System.Windows.Forms.Label();
-            this.Mark = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.autMark = new System.Windows.Forms.TextBox();
-            this.autGrade = new System.Windows.Forms.TextBox();
             this.studentBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet2 = new F454_Program.F454ProjectDatabaseDataSet2();
-            this.assess1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.status = new System.Windows.Forms.TextBox();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.leaderBoard = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.studentBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet1 = new F454_Program.F454ProjectDatabaseDataSet1();
@@ -83,15 +79,32 @@
             this.classCombo = new System.Windows.Forms.ComboBox();
             this.studentTableAdapter3 = new F454_Program.F454ProjectDatabaseDataSet3TableAdapters.StudentTableAdapter();
             this.tableAdapterManager = new F454_Program.F454ProjectDatabaseDataSet3TableAdapters.TableAdapterManager();
-            this.avgMark = new System.Windows.Forms.TextBox();
             this.studentBindingSource9 = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet4 = new F454_Program.F454ProjectDatabaseDataSet4();
-            this.avgMarklbl = new System.Windows.Forms.Label();
             this.studentTableAdapter4 = new F454_Program.F454ProjectDatabaseDataSet4TableAdapters.StudentTableAdapter();
             this.studentTableAdapter5 = new F454_Program.F454ProjectDatabaseDataSet5TableAdapters.StudentTableAdapter();
-            this.trgtGrade = new System.Windows.Forms.TextBox();
-            this.trgtGradelbl = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.logOut = new System.Windows.Forms.Button();
+            label6 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            sumMark = new System.Windows.Forms.TextBox();
+            sumGrade = new System.Windows.Forms.TextBox();
+            label8 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            sprMark = new System.Windows.Forms.TextBox();
+            sprGrade = new System.Windows.Forms.TextBox();
+            label5 = new System.Windows.Forms.Label();
+            prdctGrade = new System.Windows.Forms.TextBox();
+            prdctGradelbl = new System.Windows.Forms.Label();
+            Mark = new System.Windows.Forms.Label();
+            label10 = new System.Windows.Forms.Label();
+            autMark = new System.Windows.Forms.TextBox();
+            autGrade = new System.Windows.Forms.TextBox();
+            assess1 = new System.Windows.Forms.Label();
+            avgMark = new System.Windows.Forms.TextBox();
+            avgMarklbl = new System.Windows.Forms.Label();
+            trgtGrade = new System.Windows.Forms.TextBox();
+            trgtGradelbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource8)).BeginInit();
@@ -137,51 +150,39 @@
             this.label1.Text = "Students";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(819, 536);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(227, 221);
-            this.chart1.TabIndex = 6;
-            this.chart1.Text = "chart1";
-            // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(40, 704);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 24);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Mark";
+            label6.AutoSize = true;
+            label6.Enabled = false;
+            label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            label6.Location = new System.Drawing.Point(40, 704);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(51, 24);
+            label6.TabIndex = 35;
+            label6.Text = "Mark";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(29, 663);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 24);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Grade";
+            label7.AutoSize = true;
+            label7.Enabled = false;
+            label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            label7.Location = new System.Drawing.Point(29, 663);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(62, 24);
+            label7.TabIndex = 34;
+            label7.Text = "Grade";
             // 
             // sumMark
             // 
-            this.sumMark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 3 Mark", true));
-            this.sumMark.Location = new System.Drawing.Point(118, 705);
-            this.sumMark.Name = "sumMark";
-            this.sumMark.Size = new System.Drawing.Size(58, 20);
-            this.sumMark.TabIndex = 33;
+            sumMark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 3 Mark", true));
+            sumMark.Enabled = false;
+            sumMark.Location = new System.Drawing.Point(118, 705);
+            sumMark.Name = "sumMark";
+            sumMark.ReadOnly = true;
+            sumMark.Size = new System.Drawing.Size(58, 20);
+            sumMark.TabIndex = 33;
             // 
             // studentBindingSource10
             // 
@@ -210,135 +211,153 @@
             // 
             // sumGrade
             // 
-            this.sumGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 3 Grade", true));
-            this.sumGrade.Location = new System.Drawing.Point(118, 663);
-            this.sumGrade.Name = "sumGrade";
-            this.sumGrade.Size = new System.Drawing.Size(58, 20);
-            this.sumGrade.TabIndex = 32;
+            sumGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 3 Grade", true));
+            sumGrade.Enabled = false;
+            sumGrade.Location = new System.Drawing.Point(118, 663);
+            sumGrade.Name = "sumGrade";
+            sumGrade.ReadOnly = true;
+            sumGrade.Size = new System.Drawing.Size(58, 20);
+            sumGrade.TabIndex = 32;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(28, 618);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(296, 24);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Summer Term Assessment Grade";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            label8.AutoSize = true;
+            label8.Enabled = false;
+            label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            label8.Location = new System.Drawing.Point(28, 618);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(296, 24);
+            label8.TabIndex = 31;
+            label8.Text = "Summer Term Assessment Grade";
+            label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(40, 518);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 24);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Mark";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            label3.AutoSize = true;
+            label3.Enabled = false;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            label3.Location = new System.Drawing.Point(40, 518);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(51, 24);
+            label3.TabIndex = 30;
+            label3.Text = "Mark";
+            label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(29, 477);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 24);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Grade";
+            label4.AutoSize = true;
+            label4.Enabled = false;
+            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            label4.Location = new System.Drawing.Point(29, 477);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(62, 24);
+            label4.TabIndex = 29;
+            label4.Text = "Grade";
             // 
             // sprMark
             // 
-            this.sprMark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource8, "Term 1 Mark", true));
-            this.sprMark.Location = new System.Drawing.Point(118, 523);
-            this.sprMark.Name = "sprMark";
-            this.sprMark.Size = new System.Drawing.Size(58, 20);
-            this.sprMark.TabIndex = 28;
+            sprMark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource8, "Term 1 Mark", true));
+            sprMark.Enabled = false;
+            sprMark.Location = new System.Drawing.Point(118, 523);
+            sprMark.Name = "sprMark";
+            sprMark.ReadOnly = true;
+            sprMark.Size = new System.Drawing.Size(58, 20);
+            sprMark.TabIndex = 28;
             // 
             // sprGrade
             // 
-            this.sprGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 2 Grade", true));
-            this.sprGrade.Location = new System.Drawing.Point(118, 482);
-            this.sprGrade.Name = "sprGrade";
-            this.sprGrade.Size = new System.Drawing.Size(58, 20);
-            this.sprGrade.TabIndex = 27;
+            sprGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 2 Grade", true));
+            sprGrade.Enabled = false;
+            sprGrade.Location = new System.Drawing.Point(118, 482);
+            sprGrade.Name = "sprGrade";
+            sprGrade.ReadOnly = true;
+            sprGrade.Size = new System.Drawing.Size(58, 20);
+            sprGrade.TabIndex = 27;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(28, 431);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(279, 24);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Spring Term Assessment Grade";
+            label5.AutoSize = true;
+            label5.Enabled = false;
+            label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            label5.Location = new System.Drawing.Point(28, 431);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(279, 24);
+            label5.TabIndex = 26;
+            label5.Text = "Spring Term Assessment Grade";
             // 
             // prdctGrade
             // 
-            this.prdctGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Predicted Grade", true));
-            this.prdctGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prdctGrade.Location = new System.Drawing.Point(587, 287);
-            this.prdctGrade.Name = "prdctGrade";
-            this.prdctGrade.Size = new System.Drawing.Size(92, 26);
-            this.prdctGrade.TabIndex = 25;
-            this.prdctGrade.TextChanged += new System.EventHandler(this.prdctGrade_TextChanged);
+            prdctGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Predicted Grade", true));
+            prdctGrade.Enabled = false;
+            prdctGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            prdctGrade.Location = new System.Drawing.Point(587, 287);
+            prdctGrade.Name = "prdctGrade";
+            prdctGrade.ReadOnly = true;
+            prdctGrade.Size = new System.Drawing.Size(92, 26);
+            prdctGrade.TabIndex = 25;
+            prdctGrade.TextChanged += new System.EventHandler(this.prdctGrade_TextChanged);
             // 
             // prdctGradelbl
             // 
-            this.prdctGradelbl.AutoSize = true;
-            this.prdctGradelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.prdctGradelbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.prdctGradelbl.Location = new System.Drawing.Point(434, 293);
-            this.prdctGradelbl.Name = "prdctGradelbl";
-            this.prdctGradelbl.Size = new System.Drawing.Size(147, 24);
-            this.prdctGradelbl.TabIndex = 24;
-            this.prdctGradelbl.Text = "Predicted Grade";
+            prdctGradelbl.AutoSize = true;
+            prdctGradelbl.Enabled = false;
+            prdctGradelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            prdctGradelbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            prdctGradelbl.Location = new System.Drawing.Point(434, 293);
+            prdctGradelbl.Name = "prdctGradelbl";
+            prdctGradelbl.Size = new System.Drawing.Size(147, 24);
+            prdctGradelbl.TabIndex = 24;
+            prdctGradelbl.Text = "Predicted Grade";
             // 
             // Mark
             // 
-            this.Mark.AutoSize = true;
-            this.Mark.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Mark.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Mark.Location = new System.Drawing.Point(44, 331);
-            this.Mark.Name = "Mark";
-            this.Mark.Size = new System.Drawing.Size(51, 24);
-            this.Mark.TabIndex = 23;
-            this.Mark.Text = "Mark";
+            Mark.AutoSize = true;
+            Mark.Enabled = false;
+            Mark.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            Mark.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            Mark.Location = new System.Drawing.Point(44, 331);
+            Mark.Name = "Mark";
+            Mark.Size = new System.Drawing.Size(51, 24);
+            Mark.TabIndex = 23;
+            Mark.Text = "Mark";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(33, 293);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 24);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Grade";
+            label10.AutoSize = true;
+            label10.Enabled = false;
+            label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            label10.Location = new System.Drawing.Point(33, 293);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(62, 24);
+            label10.TabIndex = 22;
+            label10.Text = "Grade";
             // 
             // autMark
             // 
-            this.autMark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 1 Mark", true));
-            this.autMark.Location = new System.Drawing.Point(122, 335);
-            this.autMark.Name = "autMark";
-            this.autMark.Size = new System.Drawing.Size(58, 20);
-            this.autMark.TabIndex = 21;
-            this.autMark.TextChanged += new System.EventHandler(this.autMark_TextChanged);
+            autMark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 1 Mark", true));
+            autMark.Enabled = false;
+            autMark.Location = new System.Drawing.Point(122, 335);
+            autMark.Name = "autMark";
+            autMark.ReadOnly = true;
+            autMark.Size = new System.Drawing.Size(58, 20);
+            autMark.TabIndex = 21;
+            autMark.TextChanged += new System.EventHandler(this.autMark_TextChanged);
             // 
             // autGrade
             // 
-            this.autGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 1 Grade", true));
-            this.autGrade.Location = new System.Drawing.Point(122, 293);
-            this.autGrade.Name = "autGrade";
-            this.autGrade.ReadOnly = true;
-            this.autGrade.Size = new System.Drawing.Size(58, 20);
-            this.autGrade.TabIndex = 20;
-            this.autGrade.TextChanged += new System.EventHandler(this.autGrade_TextChanged);
+            autGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Term 1 Grade", true));
+            autGrade.Enabled = false;
+            autGrade.Location = new System.Drawing.Point(122, 293);
+            autGrade.Name = "autGrade";
+            autGrade.ReadOnly = true;
+            autGrade.Size = new System.Drawing.Size(58, 20);
+            autGrade.TabIndex = 20;
+            autGrade.TextChanged += new System.EventHandler(this.autGrade_TextChanged);
             // 
             // studentBindingSource5
             // 
@@ -357,53 +376,16 @@
             // 
             // assess1
             // 
-            this.assess1.AutoSize = true;
-            this.assess1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.assess1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.assess1.Location = new System.Drawing.Point(28, 247);
-            this.assess1.Name = "assess1";
-            this.assess1.Size = new System.Drawing.Size(295, 24);
-            this.assess1.TabIndex = 19;
-            this.assess1.Text = " Autumn Term Assessment Grade";
-            this.assess1.Click += new System.EventHandler(this.assess1_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(434, 445);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 24);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Comments";
-            // 
-            // status
-            // 
-            this.status.Location = new System.Drawing.Point(438, 477);
-            this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(291, 20);
-            this.status.TabIndex = 37;
-            this.status.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(819, 265);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(227, 265);
-            this.treeView1.TabIndex = 38;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
-            // leaderBoard
-            // 
-            this.leaderBoard.AutoSize = true;
-            this.leaderBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.leaderBoard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.leaderBoard.Location = new System.Drawing.Point(820, 241);
-            this.leaderBoard.Name = "leaderBoard";
-            this.leaderBoard.Size = new System.Drawing.Size(143, 26);
-            this.leaderBoard.TabIndex = 39;
-            this.leaderBoard.Text = "Leader Board";
+            assess1.AutoSize = true;
+            assess1.Enabled = false;
+            assess1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            assess1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            assess1.Location = new System.Drawing.Point(28, 247);
+            assess1.Name = "assess1";
+            assess1.Size = new System.Drawing.Size(295, 24);
+            assess1.TabIndex = 19;
+            assess1.Text = " Autumn Term Assessment Grade";
+            assess1.Click += new System.EventHandler(this.assess1_Click);
             // 
             // button1
             // 
@@ -523,12 +505,14 @@
             // 
             // avgMark
             // 
-            this.avgMark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Average Mark", true));
-            this.avgMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avgMark.Location = new System.Drawing.Point(587, 247);
-            this.avgMark.Name = "avgMark";
-            this.avgMark.Size = new System.Drawing.Size(92, 26);
-            this.avgMark.TabIndex = 45;
+            avgMark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Average Mark", true));
+            avgMark.Enabled = false;
+            avgMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            avgMark.Location = new System.Drawing.Point(587, 247);
+            avgMark.Name = "avgMark";
+            avgMark.ReadOnly = true;
+            avgMark.Size = new System.Drawing.Size(92, 26);
+            avgMark.TabIndex = 45;
             // 
             // studentBindingSource9
             // 
@@ -542,14 +526,15 @@
             // 
             // avgMarklbl
             // 
-            this.avgMarklbl.AutoSize = true;
-            this.avgMarklbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avgMarklbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.avgMarklbl.Location = new System.Drawing.Point(454, 247);
-            this.avgMarklbl.Name = "avgMarklbl";
-            this.avgMarklbl.Size = new System.Drawing.Size(127, 24);
-            this.avgMarklbl.TabIndex = 46;
-            this.avgMarklbl.Text = "Average Mark";
+            avgMarklbl.AutoSize = true;
+            avgMarklbl.Enabled = false;
+            avgMarklbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            avgMarklbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            avgMarklbl.Location = new System.Drawing.Point(454, 247);
+            avgMarklbl.Name = "avgMarklbl";
+            avgMarklbl.Size = new System.Drawing.Size(127, 24);
+            avgMarklbl.TabIndex = 46;
+            avgMarklbl.Text = "Average Mark";
             // 
             // studentTableAdapter4
             // 
@@ -561,23 +546,37 @@
             // 
             // trgtGrade
             // 
-            this.trgtGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Target Grade", true));
-            this.trgtGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trgtGrade.Location = new System.Drawing.Point(587, 329);
-            this.trgtGrade.Name = "trgtGrade";
-            this.trgtGrade.Size = new System.Drawing.Size(92, 26);
-            this.trgtGrade.TabIndex = 48;
+            trgtGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Target Grade", true));
+            trgtGrade.Enabled = false;
+            trgtGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            trgtGrade.Location = new System.Drawing.Point(587, 329);
+            trgtGrade.Name = "trgtGrade";
+            trgtGrade.ReadOnly = true;
+            trgtGrade.Size = new System.Drawing.Size(92, 26);
+            trgtGrade.TabIndex = 48;
             // 
             // trgtGradelbl
             // 
-            this.trgtGradelbl.AutoSize = true;
-            this.trgtGradelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.trgtGradelbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.trgtGradelbl.Location = new System.Drawing.Point(454, 331);
-            this.trgtGradelbl.Name = "trgtGradelbl";
-            this.trgtGradelbl.Size = new System.Drawing.Size(121, 24);
-            this.trgtGradelbl.TabIndex = 47;
-            this.trgtGradelbl.Text = "Target Grade";
+            trgtGradelbl.AutoSize = true;
+            trgtGradelbl.Enabled = false;
+            trgtGradelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            trgtGradelbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            trgtGradelbl.Location = new System.Drawing.Point(454, 331);
+            trgtGradelbl.Name = "trgtGradelbl";
+            trgtGradelbl.Size = new System.Drawing.Size(121, 24);
+            trgtGradelbl.TabIndex = 47;
+            trgtGradelbl.Text = "Target Grade";
+            // 
+            // logOut
+            // 
+            this.logOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.logOut.Location = new System.Drawing.Point(819, 27);
+            this.logOut.Name = "logOut";
+            this.logOut.Size = new System.Drawing.Size(227, 31);
+            this.logOut.TabIndex = 49;
+            this.logOut.Text = "Log Out";
+            this.logOut.UseVisualStyleBackColor = true;
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
             // TeacherProfile
             // 
@@ -585,42 +584,37 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1064, 750);
-            this.Controls.Add(this.trgtGrade);
-            this.Controls.Add(this.trgtGradelbl);
-            this.Controls.Add(this.avgMarklbl);
-            this.Controls.Add(this.avgMark);
+            this.Controls.Add(this.logOut);
+            this.Controls.Add(trgtGrade);
+            this.Controls.Add(trgtGradelbl);
+            this.Controls.Add(avgMarklbl);
+            this.Controls.Add(avgMark);
             this.Controls.Add(this.classCombo);
             this.Controls.Add(this.chooseUsr);
             this.Controls.Add(this.chooseStu);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.leaderBoard);
-            this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.status);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.sumMark);
-            this.Controls.Add(this.sumGrade);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.sprMark);
-            this.Controls.Add(this.sprGrade);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.prdctGrade);
-            this.Controls.Add(this.prdctGradelbl);
-            this.Controls.Add(this.Mark);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.autMark);
-            this.Controls.Add(this.autGrade);
-            this.Controls.Add(this.assess1);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(label6);
+            this.Controls.Add(label7);
+            this.Controls.Add(sumMark);
+            this.Controls.Add(sumGrade);
+            this.Controls.Add(label8);
+            this.Controls.Add(label3);
+            this.Controls.Add(label4);
+            this.Controls.Add(sprMark);
+            this.Controls.Add(sprGrade);
+            this.Controls.Add(label5);
+            this.Controls.Add(prdctGrade);
+            this.Controls.Add(prdctGradelbl);
+            this.Controls.Add(Mark);
+            this.Controls.Add(label10);
+            this.Controls.Add(autMark);
+            this.Controls.Add(autGrade);
+            this.Controls.Add(assess1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Welcome);
             this.Name = "TeacherProfile";
             this.Text = "Teacher Profile";
             this.Load += new System.EventHandler(this.TeacherProfile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource8)).EndInit();
@@ -650,28 +644,6 @@
 
         private System.Windows.Forms.Label Welcome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox sumMark;
-        private System.Windows.Forms.TextBox sumGrade;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox sprMark;
-        private System.Windows.Forms.TextBox sprGrade;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox prdctGrade;
-        private System.Windows.Forms.Label prdctGradelbl;
-        private System.Windows.Forms.Label Mark;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox autMark;
-        private System.Windows.Forms.TextBox autGrade;
-        private System.Windows.Forms.Label assess1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox status;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Label leaderBoard;
         private System.Windows.Forms.Button button1;
         private F454_Program.F454ProjectDatabaseDataSet f454ProjectDatabaseDataSet;
         private System.Windows.Forms.BindingSource studentBindingSource;
@@ -697,15 +669,12 @@
         private F454_Program.F454ProjectDatabaseDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource studentBindingSource8;
         private System.Windows.Forms.BindingSource f454ProjectDatabaseDataSet3BindingSource;
-        private System.Windows.Forms.TextBox avgMark;
-        private System.Windows.Forms.Label avgMarklbl;
         private F454_Program.F454ProjectDatabaseDataSet4 f454ProjectDatabaseDataSet4;
         private System.Windows.Forms.BindingSource studentBindingSource9;
         private F454_Program.F454ProjectDatabaseDataSet4TableAdapters.StudentTableAdapter studentTableAdapter4;
         private F454_Program.F454ProjectDatabaseDataSet5 f454ProjectDatabaseDataSet5;
         private System.Windows.Forms.BindingSource studentBindingSource10;
         private F454_Program.F454ProjectDatabaseDataSet5TableAdapters.StudentTableAdapter studentTableAdapter5;
-        private System.Windows.Forms.TextBox trgtGrade;
-        private System.Windows.Forms.Label trgtGradelbl;
+        private System.Windows.Forms.Button logOut;
     }
 }
