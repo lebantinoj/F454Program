@@ -1,6 +1,6 @@
 ﻿namespace UI_Designs
 {
-    partial class stuUser
+    partial class StudentProfile
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.wlcmLabel = new System.Windows.Forms.Label();
             this.assess1 = new System.Windows.Forms.Label();
             this.t1Grade = new System.Windows.Forms.TextBox();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.f454ProjectDatabaseDataSet5 = new F454_Program.F454ProjectDatabaseDataSet5();
             this.t1Mark = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Mark = new System.Windows.Forms.Label();
@@ -61,7 +64,10 @@
             this.schlLogo = new System.Windows.Forms.Label();
             this.trgtGrade = new System.Windows.Forms.TextBox();
             this.tgradeLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.stuUsername = new System.Windows.Forms.Label();
+            this.studentTableAdapter = new F454_Program.F454ProjectDatabaseDataSet5TableAdapters.StudentTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalGraph)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +76,7 @@
             this.wlcmLabel.AutoSize = true;
             this.wlcmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.wlcmLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.wlcmLabel.Location = new System.Drawing.Point(173, 24);
+            this.wlcmLabel.Location = new System.Drawing.Point(140, 24);
             this.wlcmLabel.Name = "wlcmLabel";
             this.wlcmLabel.Size = new System.Drawing.Size(126, 31);
             this.wlcmLabel.TabIndex = 0;
@@ -89,14 +95,26 @@
             // 
             // t1Grade
             // 
+            this.t1Grade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Term 1 Grade", true));
             this.t1Grade.Location = new System.Drawing.Point(404, 166);
             this.t1Grade.Name = "t1Grade";
             this.t1Grade.Size = new System.Drawing.Size(58, 20);
             this.t1Grade.TabIndex = 3;
             this.t1Grade.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.f454ProjectDatabaseDataSet5;
+            // 
+            // f454ProjectDatabaseDataSet5
+            // 
+            this.f454ProjectDatabaseDataSet5.DataSetName = "F454ProjectDatabaseDataSet5";
+            this.f454ProjectDatabaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // t1Mark
             // 
+            this.t1Mark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.f454ProjectDatabaseDataSet5, "Student.Term 1 Mark", true));
             this.t1Mark.Location = new System.Drawing.Point(404, 208);
             this.t1Mark.Name = "t1Mark";
             this.t1Mark.Size = new System.Drawing.Size(58, 20);
@@ -134,7 +152,6 @@
             this.prdctgradeLabel.Size = new System.Drawing.Size(190, 29);
             this.prdctgradeLabel.TabIndex = 7;
             this.prdctgradeLabel.Text = "Predicted Grade";
-            this.prdctgradeLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // prdctGrade
             // 
@@ -311,16 +328,16 @@
             // 
             // personalGraph
             // 
-            chartArea1.Name = "ChartArea1";
-            this.personalGraph.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.personalGraph.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.personalGraph.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.personalGraph.Legends.Add(legend4);
             this.personalGraph.Location = new System.Drawing.Point(782, 389);
             this.personalGraph.Name = "personalGraph";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.personalGraph.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.personalGraph.Series.Add(series4);
             this.personalGraph.Size = new System.Drawing.Size(209, 201);
             this.personalGraph.TabIndex = 38;
             this.personalGraph.Text = "chart1";
@@ -352,24 +369,29 @@
             this.tgradeLabel.TabIndex = 40;
             this.tgradeLabel.Text = "Target Grade";
             // 
-            // label2
+            // stuUsername
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.Location = new System.Drawing.Point(305, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 31);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "stuUser";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            this.stuUsername.AutoSize = true;
+            this.stuUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stuUsername.Location = new System.Drawing.Point(281, 24);
+            this.stuUsername.Name = "stuUsername";
+            this.stuUsername.Size = new System.Drawing.Size(139, 31);
+            this.stuUsername.TabIndex = 43;
+            this.stuUsername.Tag = "";
+            this.stuUsername.Text = "Username";
+            this.stuUsername.Click += new System.EventHandler(this.stuUsername_Click);
             // 
-            // stuUser
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
+            // StudentProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1064, 567);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.stuUsername);
             this.Controls.Add(this.trgtGrade);
             this.Controls.Add(this.tgradeLabel);
             this.Controls.Add(this.schlLogo);
@@ -400,9 +422,11 @@
             this.Controls.Add(this.t1Grade);
             this.Controls.Add(this.assess1);
             this.Controls.Add(this.wlcmLabel);
-            this.Name = "stuUser";
+            this.Name = "StudentProfile";
             this.Text = "Student Profile";
-            this.Load += new System.EventHandler(this.predictGrade_Load);
+            this.Load += new System.EventHandler(this.StudentProfile_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalGraph)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -441,6 +465,9 @@
         private System.Windows.Forms.Label schlLogo;
         private System.Windows.Forms.TextBox trgtGrade;
         private System.Windows.Forms.Label tgradeLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label stuUsername;
+        private F454_Program.F454ProjectDatabaseDataSet5 f454ProjectDatabaseDataSet5;
+        private System.Windows.Forms.BindingSource studentBindingSource;
+        private F454_Program.F454ProjectDatabaseDataSet5TableAdapters.StudentTableAdapter studentTableAdapter;
     }
 }

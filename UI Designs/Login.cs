@@ -14,7 +14,23 @@ namespace UI_Designs
 {
     public partial class Login : Form
     {
-        
+
+       /* public static string _stuUser;
+        public static string userS
+        {
+            get
+            {
+                return _stuUser;
+            }
+            set
+            {
+                _stuUser = usrTxtbox.Text;
+            }
+            
+
+        }
+        */ 
+    
 
         public Login()
         {
@@ -51,9 +67,10 @@ namespace UI_Designs
 
         }
 
-        private void usrTxtbox_TextChanged(object sender, EventArgs e)
+        public void usrTxtbox_TextChanged(object sender, EventArgs e)
         {
-
+            string _stuUser;
+            _stuUser = usrTxtbox.Text;
         }
 
         private void subLogin_Click(object sender, EventArgs e)
@@ -115,8 +132,9 @@ namespace UI_Designs
                         usrFound = true;        // If the user has been found a message will be displayed - shows successful login.
                         MessageBox.Show("Welcome, " + drS["First Name"].ToString() + ".");      // Welcome message.
                         this.Hide();        // Hides login form.
-                        var StudentProfile = new stuUser("Welcome");     // Will open up the student profile.
-                        StudentProfile.Show();      // Displays student profile.
+                        StudentProfile StuProfile = new StudentProfile(usrTxtbox.Text);     // Will open up the student profile and passes value in text box.
+                        StuProfile.Show();      // Displays student profile.
+                        
                     }
                     
                 }

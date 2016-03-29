@@ -104,8 +104,8 @@ namespace UI_Designs
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();    // Hides the current form (Teacher Profile).
-            var Edit = new Edit(v);     // A new edit form generated.
-            Edit.Show();        // Shows the edit page.
+            Edit edit = new Edit(v);     // A new edit form generated.
+            edit.Show();        // Shows the edit page.
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
