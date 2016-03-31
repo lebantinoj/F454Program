@@ -13,7 +13,7 @@ namespace UI_Designs
 {
     public partial class TeacherProfile : Form
     {
-        public OleDbConnection cn = new OleDbConnection();
+        public OleDbConnection cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=H:\\F454 Program 2\\UI Designs\\F454ProjectDatabase.accdb");
 
         public Edit v { get; private set; }
 

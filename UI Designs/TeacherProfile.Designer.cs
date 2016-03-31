@@ -50,13 +50,13 @@
             System.Windows.Forms.Label avgMarklbl;
             System.Windows.Forms.TextBox trgtGrade;
             System.Windows.Forms.Label trgtGradelbl;
-            this.Welcome = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.studentBindingSource10 = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet5 = new F454_Program.F454ProjectDatabaseDataSet5();
             this.studentBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet3 = new F454_Program.F454ProjectDatabaseDataSet3();
+            this.Welcome = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.studentBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.f454ProjectDatabaseDataSet2 = new F454_Program.F454ProjectDatabaseDataSet2();
@@ -127,29 +127,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
-            // Welcome
-            // 
-            this.Welcome.AutoSize = true;
-            this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Welcome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Welcome.Location = new System.Drawing.Point(26, 21);
-            this.Welcome.Name = "Welcome";
-            this.Welcome.Size = new System.Drawing.Size(126, 31);
-            this.Welcome.TabIndex = 1;
-            this.Welcome.Text = "Welcome";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(26, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 31);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Students";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -193,21 +170,6 @@
             // 
             this.f454ProjectDatabaseDataSet5.DataSetName = "F454ProjectDatabaseDataSet5";
             this.f454ProjectDatabaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentBindingSource8
-            // 
-            this.studentBindingSource8.DataMember = "Student";
-            this.studentBindingSource8.DataSource = this.f454ProjectDatabaseDataSet3BindingSource;
-            // 
-            // f454ProjectDatabaseDataSet3BindingSource
-            // 
-            this.f454ProjectDatabaseDataSet3BindingSource.DataSource = this.f454ProjectDatabaseDataSet3;
-            this.f454ProjectDatabaseDataSet3BindingSource.Position = 0;
-            // 
-            // f454ProjectDatabaseDataSet3
-            // 
-            this.f454ProjectDatabaseDataSet3.DataSetName = "F454ProjectDatabaseDataSet3";
-            this.f454ProjectDatabaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sumGrade
             // 
@@ -266,6 +228,21 @@
             sprMark.ReadOnly = true;
             sprMark.Size = new System.Drawing.Size(58, 20);
             sprMark.TabIndex = 28;
+            // 
+            // studentBindingSource8
+            // 
+            this.studentBindingSource8.DataMember = "Student";
+            this.studentBindingSource8.DataSource = this.f454ProjectDatabaseDataSet3BindingSource;
+            // 
+            // f454ProjectDatabaseDataSet3BindingSource
+            // 
+            this.f454ProjectDatabaseDataSet3BindingSource.DataSource = this.f454ProjectDatabaseDataSet3;
+            this.f454ProjectDatabaseDataSet3BindingSource.Position = 0;
+            // 
+            // f454ProjectDatabaseDataSet3
+            // 
+            this.f454ProjectDatabaseDataSet3.DataSetName = "F454ProjectDatabaseDataSet3";
+            this.f454ProjectDatabaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sprGrade
             // 
@@ -359,6 +336,88 @@
             autGrade.TabIndex = 20;
             autGrade.TextChanged += new System.EventHandler(this.autGrade_TextChanged);
             // 
+            // assess1
+            // 
+            assess1.AutoSize = true;
+            assess1.Enabled = false;
+            assess1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            assess1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            assess1.Location = new System.Drawing.Point(28, 247);
+            assess1.Name = "assess1";
+            assess1.Size = new System.Drawing.Size(295, 24);
+            assess1.TabIndex = 19;
+            assess1.Text = " Autumn Term Assessment Grade";
+            assess1.Click += new System.EventHandler(this.assess1_Click);
+            // 
+            // avgMark
+            // 
+            avgMark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Average Mark", true));
+            avgMark.Enabled = false;
+            avgMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            avgMark.Location = new System.Drawing.Point(587, 247);
+            avgMark.Name = "avgMark";
+            avgMark.ReadOnly = true;
+            avgMark.Size = new System.Drawing.Size(92, 26);
+            avgMark.TabIndex = 45;
+            // 
+            // avgMarklbl
+            // 
+            avgMarklbl.AutoSize = true;
+            avgMarklbl.Enabled = false;
+            avgMarklbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            avgMarklbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            avgMarklbl.Location = new System.Drawing.Point(454, 247);
+            avgMarklbl.Name = "avgMarklbl";
+            avgMarklbl.Size = new System.Drawing.Size(127, 24);
+            avgMarklbl.TabIndex = 46;
+            avgMarklbl.Text = "Average Mark";
+            // 
+            // trgtGrade
+            // 
+            trgtGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Target Grade", true));
+            trgtGrade.Enabled = false;
+            trgtGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            trgtGrade.Location = new System.Drawing.Point(587, 329);
+            trgtGrade.Name = "trgtGrade";
+            trgtGrade.ReadOnly = true;
+            trgtGrade.Size = new System.Drawing.Size(92, 26);
+            trgtGrade.TabIndex = 48;
+            // 
+            // trgtGradelbl
+            // 
+            trgtGradelbl.AutoSize = true;
+            trgtGradelbl.Enabled = false;
+            trgtGradelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            trgtGradelbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            trgtGradelbl.Location = new System.Drawing.Point(454, 331);
+            trgtGradelbl.Name = "trgtGradelbl";
+            trgtGradelbl.Size = new System.Drawing.Size(121, 24);
+            trgtGradelbl.TabIndex = 47;
+            trgtGradelbl.Text = "Target Grade";
+            // 
+            // Welcome
+            // 
+            this.Welcome.AutoSize = true;
+            this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Welcome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Welcome.Location = new System.Drawing.Point(26, 21);
+            this.Welcome.Name = "Welcome";
+            this.Welcome.Size = new System.Drawing.Size(126, 31);
+            this.Welcome.TabIndex = 1;
+            this.Welcome.Text = "Welcome";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(26, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 31);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Students";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // studentBindingSource5
             // 
             this.studentBindingSource5.DataMember = "Student";
@@ -373,19 +432,6 @@
             // 
             this.f454ProjectDatabaseDataSet2.DataSetName = "F454ProjectDatabaseDataSet2";
             this.f454ProjectDatabaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // assess1
-            // 
-            assess1.AutoSize = true;
-            assess1.Enabled = false;
-            assess1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            assess1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            assess1.Location = new System.Drawing.Point(28, 247);
-            assess1.Name = "assess1";
-            assess1.Size = new System.Drawing.Size(295, 24);
-            assess1.TabIndex = 19;
-            assess1.Text = " Autumn Term Assessment Grade";
-            assess1.Click += new System.EventHandler(this.assess1_Click);
             // 
             // button1
             // 
@@ -503,17 +549,6 @@
             this.tableAdapterManager.TeacherTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = F454_Program.F454ProjectDatabaseDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // avgMark
-            // 
-            avgMark.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Average Mark", true));
-            avgMark.Enabled = false;
-            avgMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            avgMark.Location = new System.Drawing.Point(587, 247);
-            avgMark.Name = "avgMark";
-            avgMark.ReadOnly = true;
-            avgMark.Size = new System.Drawing.Size(92, 26);
-            avgMark.TabIndex = 45;
-            // 
             // studentBindingSource9
             // 
             this.studentBindingSource9.DataMember = "Student";
@@ -524,18 +559,6 @@
             this.f454ProjectDatabaseDataSet4.DataSetName = "F454ProjectDatabaseDataSet4";
             this.f454ProjectDatabaseDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // avgMarklbl
-            // 
-            avgMarklbl.AutoSize = true;
-            avgMarklbl.Enabled = false;
-            avgMarklbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            avgMarklbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            avgMarklbl.Location = new System.Drawing.Point(454, 247);
-            avgMarklbl.Name = "avgMarklbl";
-            avgMarklbl.Size = new System.Drawing.Size(127, 24);
-            avgMarklbl.TabIndex = 46;
-            avgMarklbl.Text = "Average Mark";
-            // 
             // studentTableAdapter4
             // 
             this.studentTableAdapter4.ClearBeforeFill = true;
@@ -543,29 +566,6 @@
             // studentTableAdapter5
             // 
             this.studentTableAdapter5.ClearBeforeFill = true;
-            // 
-            // trgtGrade
-            // 
-            trgtGrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource10, "Target Grade", true));
-            trgtGrade.Enabled = false;
-            trgtGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            trgtGrade.Location = new System.Drawing.Point(587, 329);
-            trgtGrade.Name = "trgtGrade";
-            trgtGrade.ReadOnly = true;
-            trgtGrade.Size = new System.Drawing.Size(92, 26);
-            trgtGrade.TabIndex = 48;
-            // 
-            // trgtGradelbl
-            // 
-            trgtGradelbl.AutoSize = true;
-            trgtGradelbl.Enabled = false;
-            trgtGradelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            trgtGradelbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            trgtGradelbl.Location = new System.Drawing.Point(454, 331);
-            trgtGradelbl.Name = "trgtGradelbl";
-            trgtGradelbl.Size = new System.Drawing.Size(121, 24);
-            trgtGradelbl.TabIndex = 47;
-            trgtGradelbl.Text = "Target Grade";
             // 
             // logOut
             // 
@@ -613,7 +613,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Welcome);
             this.Name = "TeacherProfile";
-            this.Text = "Teacher Profile";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.TeacherProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f454ProjectDatabaseDataSet5)).EndInit();

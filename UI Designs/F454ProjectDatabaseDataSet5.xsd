@@ -229,10 +229,10 @@
   <xs:element name="F454ProjectDatabaseDataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="F454ProjectDatabaseDataSet5" msprop:Generator_UserDSName="F454ProjectDatabaseDataSet5">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Student" msprop:Generator_TableClassName="StudentDataTable" msprop:Generator_TableVarName="tableStudent" msprop:Generator_TablePropName="Student" msprop:Generator_RowDeletingName="StudentRowDeleting" msprop:Generator_RowChangingName="StudentRowChanging" msprop:Generator_RowEvHandlerName="StudentRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentRowDeleted" msprop:Generator_UserTableName="Student" msprop:Generator_RowChangedName="StudentRowChanged" msprop:Generator_RowEvArgName="StudentRowChangeEvent" msprop:Generator_RowClassName="StudentRow">
+        <xs:element name="Student" msprop:Generator_TableClassName="StudentDataTable" msprop:Generator_TableVarName="tableStudent" msprop:Generator_RowChangedName="StudentRowChanged" msprop:Generator_TablePropName="Student" msprop:Generator_RowDeletingName="StudentRowDeleting" msprop:Generator_RowChangingName="StudentRowChanging" msprop:Generator_RowEvHandlerName="StudentRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentRowDeleted" msprop:Generator_RowClassName="StudentRow" msprop:Generator_UserTableName="Student" msprop:Generator_RowEvArgName="StudentRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="StuID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnStuID" msprop:Generator_ColumnPropNameInRow="StuID" msprop:Generator_ColumnPropNameInTable="StuIDColumn" msprop:Generator_UserColumnName="StuID" type="xs:int" />
+              <xs:element name="StuID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnStuID" msprop:Generator_ColumnPropNameInRow="StuID" msprop:Generator_ColumnPropNameInTable="StuIDColumn" msprop:Generator_UserColumnName="StuID" type="xs:int" />
               <xs:element name="First_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnFirst_Name" msprop:Generator_ColumnPropNameInRow="First_Name" msprop:Generator_ColumnPropNameInTable="First_NameColumn" msprop:Generator_UserColumnName="First Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -311,7 +311,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Teacher" msprop:Generator_TableClassName="TeacherDataTable" msprop:Generator_TableVarName="tableTeacher" msprop:Generator_TablePropName="Teacher" msprop:Generator_RowDeletingName="TeacherRowDeleting" msprop:Generator_RowChangingName="TeacherRowChanging" msprop:Generator_RowEvHandlerName="TeacherRowChangeEventHandler" msprop:Generator_RowDeletedName="TeacherRowDeleted" msprop:Generator_UserTableName="Teacher" msprop:Generator_RowChangedName="TeacherRowChanged" msprop:Generator_RowEvArgName="TeacherRowChangeEvent" msprop:Generator_RowClassName="TeacherRow">
+        <xs:element name="Teacher" msprop:Generator_TableClassName="TeacherDataTable" msprop:Generator_TableVarName="tableTeacher" msprop:Generator_RowChangedName="TeacherRowChanged" msprop:Generator_TablePropName="Teacher" msprop:Generator_RowDeletingName="TeacherRowDeleting" msprop:Generator_RowChangingName="TeacherRowChanging" msprop:Generator_RowEvHandlerName="TeacherRowChangeEventHandler" msprop:Generator_RowDeletedName="TeacherRowDeleted" msprop:Generator_RowClassName="TeacherRow" msprop:Generator_UserTableName="Teacher" msprop:Generator_RowEvArgName="TeacherRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TeachID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTeachID" msprop:Generator_ColumnPropNameInRow="TeachID" msprop:Generator_ColumnPropNameInTable="TeachIDColumn" msprop:Generator_UserColumnName="TeachID" type="xs:int" />

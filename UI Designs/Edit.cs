@@ -13,14 +13,10 @@ namespace UI_Designs
 {
     public partial class Edit : Form
     {
-        private OleDbConnection cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=H:\\F454 Program 2\\UI Designs\\F454ProjectDatabase.accdb");
+        
         public Edit(Edit updateAcc)
         {
             InitializeComponent();
-            
-            // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet5.Student' table. You can move, or remove it, as needed.
-            this.studentTableAdapter.Fill(this.f454ProjectDatabaseDataSet5.Student);
-
             
             
         }
@@ -30,22 +26,12 @@ namespace UI_Designs
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Edit_Load(object sender, EventArgs e)
         {
-        }
-        
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
+            // TODO: This line of code loads data into the 'f454ProjectDatabaseDataSet5.Student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.f454ProjectDatabaseDataSet5.Student);
+            f454ProjectDatabaseDataSet5BindingSource.DataSource = this.f454ProjectDatabaseDataSet5.Student;
 
         }
 
@@ -56,52 +42,73 @@ namespace UI_Designs
             Tp.Show();      //Teacher Profile is shown.
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       
+        private void editDg_KeyDown (object sender, KeyEventArgs e)
         {
-          
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (MessageBox.Show("Are you sure you want to delete this record?", "Message", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+                    f454ProjectDatabaseDataSet5BindingSource.RemoveCurrent();
+            }
         }
 
-        
-        private void button2_Click(object sender, EventArgs e)
+        private void newBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox10_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            /*
+            // Catch Statement - tries first block of code, followed by catch for exceptions.
             try
             {
-                cn.Open();
+                // The control can respond to user interaction.
+                editDg.Enabled = true;
 
-                OleDbCommand cm = new OleDbCommand();
-                cm.Connection = cn; // command to execute using the ocnnection.
-                cm.CommandText = ""; //query.
+                // Input focus to first name text box.
+                enterFirstName.Focus();
 
-                OleDbDataReader read = cm.ExecuteNonQuery(); //We want to insert so we execute non reader. Retrieving data then 
+                // Adds new row in database, projects to data set.
+                this.f454ProjectDatabaseDataSet5.Student.AddStudentRow(this.f454ProjectDatabaseDataSet5.Student.NewStudentRow());
 
-                cn.Close();
+                // Moves to the last item on database.
+                f454ProjectDatabaseDataSet5BindingSource.MoveLast();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error " + ex);
+                // Shows error in error message.
+                MessageBox.Show(ex.Message, "Message: ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                f454ProjectDatabaseDataSet5BindingSource.ResetBindings(false);
             }
-             * */
+        }
+
+        private void sveBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f454ProjectDatabaseDataSet5BindingSource.EndEdit();
+                studentTableAdapter.Update(this.f454ProjectDatabaseDataSet5.Student);
+                editDg.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                f454ProjectDatabaseDataSet5BindingSource.ResetBindings(false);
+            }
+        }
+
+        private void cnclBtn_Click(object sender, EventArgs e)
+        {
+            editDg.Enabled = false;
+            f454ProjectDatabaseDataSet5BindingSource.ResetBindings(false);
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            editDg.Enabled = true;
+            enterFirstName.Focus();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
-            
 
-    
     }
 }

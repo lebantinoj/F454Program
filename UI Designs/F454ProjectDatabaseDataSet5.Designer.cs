@@ -648,9 +648,9 @@ namespace F454_Program {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnStuID}, true));
                 this.columnStuID.AutoIncrement = true;
-                this.columnStuID.AutoIncrementSeed = -1;
-                this.columnStuID.AutoIncrementStep = -1;
+                this.columnStuID.AutoIncrementSeed = 1;
                 this.columnStuID.AllowDBNull = false;
+                this.columnStuID.ReadOnly = true;
                 this.columnStuID.Unique = true;
                 this.columnFirst_Name.MaxLength = 255;
                 this.columnLast_Name.MaxLength = 255;
